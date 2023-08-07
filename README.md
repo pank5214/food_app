@@ -1,8 +1,9 @@
 # Namaste React 🚀
+
 React projects
 
-
 # Parcel is a beast:
+
 - Dev Build
 - Local Server
 - HMR = Hot Module Replacement
@@ -20,3 +21,22 @@ React projects
 - HTTPs
 - Tree Shaking ---> Remove unused Code
 - Creates Different dev & Production bundles
+
+# Two types of Export/Import:
+
+1. Default Export/Import:
+
+export default component;
+import component from "path";
+
+2. Named Export/Import:
+
+export const component;
+import {component} from "path";
+
+# React Hooks
+
+(Normal JS utility functions)
+
+- useState() - Superpowerful State Variables in react
+- useEffect()
