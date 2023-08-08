@@ -4,7 +4,6 @@ import { LOGO_URL } from "../utils/constants";
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
 
-  console.log("Header is rendered again");
   return (
     <div className="header">
       <div className="logo-container">
