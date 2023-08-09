@@ -8,7 +8,7 @@ React projects
 - Local Server
 - HMR = Hot Module Replacement
 - File Watching Algorithm ---> Written in c++
-- Caching ---> Makes Faster Builsd
+- Caching ---> Makes Faster Builds
 - Image Optimization
 - Minification
 - Bundling

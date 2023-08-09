@@ -11,9 +11,6 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  // Whenever state variables updated, react triggers a reconciliation cycle(re-renders the components)
-  console.log("Body Rendered");
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -22,8 +19,6 @@ const Body = () => {
     const data = await fetch(RESTAURANT_API);
 
     const json = await data.json();
-
-    console.log("api calling", json);
 
     setListOfRestaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -49,7 +44,9 @@ const Body = () => {
         <button
           onClick={() => {
             const filteredRestaurant = listOfRestaurants?.filter((res) =>
-              res?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
+              res?.info?.name
+                ?.toLowerCase()
+                ?.includes(searchText?.toLowerCase())
             );
             setFilteredRestaurant(filteredRestaurant);
           }}
