@@ -5,23 +5,21 @@ import UserClass from "./UserClass";
 class About extends Component {
   constructor(props) {
     super(props);
-    console.log("Parent Constructor");
+    // console.log("Parent Constructor");
   }
 
   componentDidMount() {
-    console.log("Parent Component Did Mount");
+    // console.log("Parent Component Did Mount");
   }
 
   render() {
-    console.log("Parent Render");
+    // console.log("Parent Render");
     return (
       <div>
         <h1>About Page</h1>
         <h2>This is an About Page!</h2>
-        {/* <User name={"Pankaj Yadav function()"} /> */}
-        <UserClass name={"First"} location={"Gaya Class"} />
-        <UserClass name={"Second"} location={"Gaya Class"} />
-        <UserClass name={"Third"} location={"Gaya Class"} />
+        <User />
+        {/* <UserClass name={"First"} location={"Gaya Class"} /> */}
       </div>
     );
   }
@@ -43,7 +41,7 @@ Parent Constructor
  Third Child Render
 
  <DOM Updated => in a single batch>
- 
+
  First Child component Did Mount
  Second Child component Did Mount
  Third Child component Did Mount
