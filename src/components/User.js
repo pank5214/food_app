@@ -6,15 +6,15 @@ const User = ({ name }) => {
 
   useEffect(() => {
     const Timer = setInterval(() => {
-      console.log("UseEffect Timer");
+    //   console.log("UseEffect Timer");
     }, 1000);
 
-    console.log("UseEffect");
+    // console.log("UseEffect");
 
     // To stop the Timer, we have to return clearInterval() ---> in useEffect => It will unmount the component from web
     return () => {
       clearInterval(Timer);
-      console.log("UseEffect Return");
+    //   console.log("UseEffect Return");
     };
   }, []);
 

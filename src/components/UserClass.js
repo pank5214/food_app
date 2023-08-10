@@ -15,7 +15,6 @@ class UserClass extends React.Component {
   }
 
   async componentDidMount() {
-    console.log(this.props.name, "Child component Did Mount");
     const data = await fetch("https://api.github.com/users/pank5214");
     const json = await data.json();
     console.log(json);
@@ -25,23 +24,22 @@ class UserClass extends React.Component {
     });
 
     this.timer = setInterval(() => {
-      console.log("ComponentDidMount Timer");
+      // console.log("ComponentDidMount Timer");
     }, 1000);
   }
 
   componentDidUpdate() {
-    console.log("Component Did Update");
+    // console.log("Component Did Update");
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer  );
-    console.log("Component Will Unmount");
+    clearInterval(this.timer);
+    // console.log("Component Will Unmount");
   }
   render() {
     console.log(this.props.name, "Child Render");
     const { name, login, avatar_url } = this.state.userInfo;
 
-    // debugger;
     return (
       <div className="user-card">
         <img src={avatar_url} alt="" />
@@ -54,21 +52,3 @@ class UserClass extends React.Component {
 }
 
 export default UserClass;
-
-/*
- *
- *------------ MOUNTING ----------------
- * Constructor(Dummy)
- * Render(Dummy)
- *      <HTML Dummy>
- * Component Did Mount
- *       <API CALL>
- *       <this.setState ----> state variable is updated
- *
- *
- * --------- UPDATE ----------
- *       Render(API Data)
- *       <HTML(new API data)>
- *        Component Did Update
- *
- */
