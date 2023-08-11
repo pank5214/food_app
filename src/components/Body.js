@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 import { RESTAURANT_API } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -35,7 +36,7 @@ const Body = () => {
     return (
       <div>
         <h1>You'r offline ! Please check your internet connection!!</h1>
-        <h2>Check your device connection and continue</h2>
+        <h2>Check your device internet connection working or not</h2>
       </div>
     );
   }
@@ -44,40 +45,44 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <input
-          type="text"
-          className="input"
-          value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-          }}
-        />
-        <button
-          onClick={() => {
-            const filteredRestaurant = listOfRestaurants?.filter((res) =>
-              res?.info?.name
-                ?.toLowerCase()
-                ?.includes(searchText?.toLowerCase())
-            );
-            setFilteredRestaurant(filteredRestaurant);
-          }}
-        >
-          Search
-        </button>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRestaurants?.filter(
-              (restaurant) => restaurant?.info?.avgRating > 4
-            );
-            setFilteredRestaurant(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+      <div className="flex">
+        <div className=" m-2">
+          <input
+            type="text"
+            className="border border-solid border-black rounded-md"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="px-4 py-2 bg-green-200 m-4 rounded-lg"
+            onClick={() => {
+              const filteredRestaurant = listOfRestaurants?.filter((res) =>
+                res?.info?.name
+                  ?.toLowerCase()
+                  ?.includes(searchText?.toLowerCase())
+              );
+              setFilteredRestaurant(filteredRestaurant);
+            }}
+          >
+            Search
+          </button>
+          <button
+            className=" m-4 px-5 py-2 bg-green-200 rounded-lg hover:bg-green-300"
+            onClick={() => {
+              const filteredList = listOfRestaurants?.filter(
+                (restaurant) => restaurant?.info?.avgRating >= 4.3
+              );
+              setFilteredRestaurant(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+
+      <div className="flex flex-wrap">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant?.info?.id}

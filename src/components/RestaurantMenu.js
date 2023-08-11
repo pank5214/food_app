@@ -19,13 +19,13 @@ const RestaurantMenu = () => {
       ?.itemCards;
 
   return (
-    <div className="menu">
-      <h1>{name}</h1>
-      <h3>
+    <div className="px-4 py-4">
+      <h1 className="font-bold text-red-700">{name}</h1>
+      <h3 className="font-thin">
         {cuisines.join(", ")} - {costForTwoMessage}
       </h3>
-      <h2>Menu</h2>
-      <ul>
+      <h2 className="font-semibold pt-4 text-zinc-700">Menu:)-</h2>
+      <ul className="py-1 text-black">
         {itemCards?.map((items) => (
           <li key={items?.card?.info?.id}>
             {items?.card?.info?.name} = Rs{" "}
@@ -33,6 +33,7 @@ const RestaurantMenu = () => {
               items?.card?.info?.defaultPrice / 100}
           </li>
         ))}
+        
       </ul>
     </div>
   );

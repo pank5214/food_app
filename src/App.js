@@ -7,14 +7,8 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Shimmer from "./components/Shimmer";
 // import Grocery from "./components/Grocery";
-
-// Chunking
-// Code Splitting
-// Dynamic Bundling
-// Lazy Loding
-// On Demand Loading
-// Dynamic import
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -53,7 +47,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/grocery",
         element: (
-          <Suspense fallback={<h1>Loading....</h1>}>
+          <Suspense fallback={<Shimmer />}>
             <Grocery />
           </Suspense>
         ),

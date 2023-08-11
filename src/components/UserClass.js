@@ -11,13 +11,13 @@ class UserClass extends React.Component {
         location: "Default",
       },
     };
-    console.log(this.props.name, "Child Constructor");
+    // console.log(this.props.name, "Child Constructor");
   }
 
   async componentDidMount() {
     const data = await fetch("https://api.github.com/users/pank5214");
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
 
     this.setState({
       userInfo: json,
@@ -37,7 +37,7 @@ class UserClass extends React.Component {
     // console.log("Component Will Unmount");
   }
   render() {
-    console.log(this.props.name, "Child Render");
+    // console.log(this.props.name, "Child Render");
     const { name, login, avatar_url } = this.state.userInfo;
 
     return (
