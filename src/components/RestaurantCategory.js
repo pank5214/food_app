@@ -5,8 +5,8 @@ const RestaurantCategory = ({ categoryData, showItems, setShowIndex }) => {
   const [show, setShow] = useState();
 
   const clickHandler = () => {
-    const value = setShow(!show);
-    setShowIndex(value);
+    const isVisible = setShow(!show);
+    setShowIndex(isVisible);
   };
   return (
     <div>
