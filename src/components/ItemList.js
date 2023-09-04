@@ -35,7 +35,7 @@ const ItemList = ({ items }) => {
             <div className="w-3/12 p-4">
               <div className="absolute">
                 <button
-                  className="px-4 mx-8 my-[70px] rounded-lg bg-gray-50 hover:bg-gray-200 text-blue-400 shadow-lg"
+                  className="px-4 md:mx-8 my-[40px] md:my-[70px] rounded-lg bg-gray-50 hover:bg-gray-200 text-blue-400 shadow-lg"
                   onClick={() => handleAddItem(item)}
                 >
                   Add +

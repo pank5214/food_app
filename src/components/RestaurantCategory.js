@@ -10,12 +10,12 @@ const RestaurantCategory = ({ categoryData, showItems, setShowIndex }) => {
   };
   return (
     <div>
-      <div className="w-6/12 mx-auto my-4 p-4 bg-gray-50 shadow-lg ">
+      <div className="md:w-6/12 mx-auto my-4 p-4 bg-gray-50 shadow-lg ">
         <div
           className="flex justify-between cursor-pointer"
           onClick={clickHandler}
         >
-          <span className="font-semibold text-lg">
+          <span className="font-semibold md:text-lg">
             {categoryData.title} ({categoryData.itemCards.length})
           </span>
           <span>🔽</span>
