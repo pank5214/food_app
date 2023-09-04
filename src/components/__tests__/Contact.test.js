@@ -3,21 +3,6 @@ import Contact from "../Contact";
 import "@testing-library/jest-dom";
 
 describe("Contact Us Page Test Case", () => {
-  beforeEach(() => {
-    // console.log("beforeEach");
-  });
-
-  beforeAll(() => {
-    // console.log("beforeAll");
-  });
-
-  afterEach(() => {
-    // console.log("afterEach");
-  });
-
-  afterAll(() => {
-    // console.log("afterAll");
-  });
 
   it("should load contact component", () => {
     render(<Contact />);
@@ -50,8 +35,6 @@ describe("Contact Us Page Test Case", () => {
     render(<Contact />);
     //Querying
     const inputBoxes = screen.getAllByRole("textbox");
-
-    // console.log(inputBoxes.length);
 
     //Assertion
     expect(inputBoxes.length).toBe(2);

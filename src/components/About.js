@@ -1,37 +1,30 @@
-import { Component } from "react";
-import User from "./User";
-import UserClass from "./UserClass";
-import UserContext from "../utils/UserContext";
+import React from "react";
+import food from "../../Images/burger-image.png";
 
-class About extends Component {
-  constructor(props) {
-    super(props);
-    // console.log("Parent Constructor");
-  }
-
-  componentDidMount() {
-    // console.log("Parent Component Did Mount");
-  }
-
-  render() {
-    // console.log("Parent Render");
-    return (
-      <div>
-        <h1>About Class Component</h1>
-        <div>
-          LoggedIn User
-          <UserContext.Consumer>
-            {({ loggedInUser }) => (
-              <h1 className="font-bold text-lg">{loggedInUser}</h1>
-            )}
-          </UserContext.Consumer>
-        </div>
-        <h2>This is an About Page!</h2>
-        {/* <User /> */}
-        <UserClass name={"First"} location={"Gaya Class"} />
+const About = () => {
+  return (
+    <div className="flex justify-between m-4 p-4">
+      <div className="self-center">
+        <h1 className="font-bold text-4xl my-4  text-green-900">
+          Welcome to the
+          <br />
+          <br />
+          World of Flavor with Our
+          <br />
+          <br />
+          <span className="bg-red-500 text-white rounded-lg p-2">
+            Tasty and Fresh Creations!
+          </span>
+        </h1>
+        <h4 className="text-lg font-style: italic text-slate-500">
+          "Fueling Your Day with FoodHunger's Healthy Delight!"
+        </h4>
       </div>
-    );
-  }
-}
+      <div className="">
+        <img src={food} alt="Food Image" />
+      </div>
+    </div>
+  );
+};
 
 export default About;
