@@ -6,7 +6,7 @@ const About = () => {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <div className="flex justify-center m-4">
+      <div className="flex flex-col justify-center items-center m-4">
         {show ? (
           <>
             <Link to={"/about"}>
@@ -25,9 +25,9 @@ const About = () => {
         )}
       </div>
 
-      <div className="flex flex-col md:flex-row md:justify-between p-4 m-4">
+      <div className="flex flex-col items-center md:flex-row md:justify-between p-4 m-4">
         <div className="mx-15 md:mx-0 md:self-center">
-          <h1 className="font-bold text-3xl md:text-4xl my-4 text-green-900">
+          <h1 className="font-bold text-3xl md:text-4xl my-4 text-green-900 md:text-start text-center">
             Welcome to the
             <br />
             <br />
@@ -44,7 +44,7 @@ const About = () => {
         </div>
         <div className="flex justify-center">
           <img
-            className="w-[55%] h-[180px] my-12 md:m-0 md:w-auto md:h-auto"
+            className="h-[180px] my-12 md:m-0 md:w-auto md:h-auto"
             src={food}
             alt="Food Image"
           />
