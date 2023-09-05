@@ -10,17 +10,16 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import Profile from "./components/Profile";
 
 const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
-      <div className="app">
-        <Header />
-        <Outlet />
-        <Footer />
-      </div>
+      <Header />
+      <Outlet />
+      <Footer />
     </Provider>
   );
 };
@@ -41,7 +40,14 @@ const appRouter = createBrowserRouter([
             <About />
           </Suspense>
         ),
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+        ],
       },
+
       {
         path: "/contact",
         element: <Contact />,

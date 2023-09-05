@@ -53,7 +53,7 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className="p-2 w-1/3 border border-solid rounded-l-lg"
+            className="p-2 w-2/3 md:w-1/3 border border-solid rounded-l-lg"
             required
             placeholder="Search Restaurant Name..."
             value={searchText}
@@ -62,7 +62,7 @@ const Body = () => {
             }}
           />
           <button
-            className="p-2 px-4 bg-green-200 rounded-r-lg hover:bg-green-300"
+            className="p-2 px-4 bg-green-300 rounded-r-lg hover:bg-green-400"
             onClick={() => {
               const filteredRestaurant = listOfRestaurants?.filter((res) =>
                 res?.info?.name
@@ -78,7 +78,7 @@ const Body = () => {
 
         <div className="flex self-center">
           <button
-            className="px-4 py-2 bg-green-200 rounded-lg hover:bg-green-300"
+            className="px-4 py-2 bg-green-300 rounded-lg hover:bg-green-400"
             onClick={() => {
               const filteredList = listOfRestaurants?.filter(
                 (restaurant) => restaurant?.info?.avgRating >= 4.3
