@@ -41,7 +41,7 @@ const ItemList = ({ items }) => {
                   Add +
                 </button>
               </div>
-              <img src={CDN_URL + item?.card?.info?.imageId} />
+              <img src={CDN_URL + item?.card?.info?.imageId} alt="item-image" className="rounded-lg"/>
             </div>
           </div>
         ))}

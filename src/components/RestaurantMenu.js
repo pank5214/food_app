@@ -29,14 +29,16 @@ const RestaurantMenu = () => {
       <p className="font-semibold text-lg">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
-      {categories.map((category, index) => (
-        <RestaurantCategory
-          key={category?.card?.card?.title}
-          categoryData={category?.card?.card}
-          showItems={index === showIndex ? true : false}
-          setShowIndex={() => setShowIndex(index)}
-        />
-      ))}
+      <div className="mb-[120px]">
+        {categories.map((category, index) => (
+          <RestaurantCategory
+            key={category?.card?.card?.title}
+            categoryData={category?.card?.card}
+            showItems={index === showIndex ? true : false}
+            setShowIndex={() => setShowIndex(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

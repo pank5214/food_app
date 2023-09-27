@@ -10,7 +10,7 @@ const RestaurantCategory = ({ categoryData, showItems, setShowIndex }) => {
   };
   return (
     <div>
-      <div className="md:w-6/12 mx-auto my-4 p-4 bg-gray-50 shadow-lg ">
+      <div className="md:w-6/12 w-11/12 mx-auto my-4 p-4 bg-gray-50 shadow-lg">
         <div
           className="flex justify-between cursor-pointer"
           onClick={clickHandler}
