@@ -1,5 +1,5 @@
 import RestaurantCard, { withDiscountLabel } from "./RestaurantCard";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { RESTAURANT_API } from "../utils/constants";
 import { Link } from "react-router-dom";
@@ -86,7 +86,6 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-        
       </div>
 
       <div className="flex flex-wrap justify-center my-2 mb-20">

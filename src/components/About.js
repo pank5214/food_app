@@ -10,7 +10,10 @@ const About = () => {
         {show ? (
           <>
             <Link to={"/about"}>
-              <button className="bg-green-300 hover:bg-green-400 rounded-lg p-3" onClick={() => setShow(false)}>
+              <button
+                className="bg-green-300 hover:bg-green-400 rounded-lg p-3"
+                onClick={() => setShow(false)}
+              >
                 Hide My Profile
               </button>
             </Link>
@@ -18,7 +21,10 @@ const About = () => {
           </>
         ) : (
           <Link to={"profile"}>
-            <button className="bg-green-300 hover:bg-green-400 rounded-lg p-3" onClick={() => setShow(true)}>
+            <button
+              className="bg-green-300 hover:bg-green-400 rounded-lg p-3"
+              onClick={() => setShow(true)}
+            >
               Show My Profile
             </button>
           </Link>
@@ -46,7 +52,7 @@ const About = () => {
           <img
             className="h-[180px] my-12 md:m-0 md:w-auto md:h-auto"
             src={food}
-            alt="Food Image"
+            alt="Food-Image"
           />
         </div>
       </div>

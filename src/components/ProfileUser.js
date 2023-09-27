@@ -9,8 +9,6 @@ import {
 } from "../utils/constants";
 
 const ProfileUser = ({ gitData }) => {
-  console.log("gitData", gitData);
-
   return (
     <div className="flex flex-row justify-evenly m-4 p-4">
       <a href={Linkedin_Link} className="w-22 h-22" target="_blank">
@@ -18,11 +16,7 @@ const ProfileUser = ({ gitData }) => {
           <BsLinkedin />
         </i>
       </a>
-      <a
-        href={Twitter_Link}
-        className=" w-22 h-22"
-        target="_blank"
-      >
+      <a href={Twitter_Link} className=" w-22 h-22" target="_blank">
         <i>
           <SiTwitter />
         </i>

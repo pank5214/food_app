@@ -10,7 +10,6 @@ const Profile = () => {
   const gitHubAccountData = async () => {
     const data = await fetch("https://api.github.com/users/pank5214");
     const json = await data.json();
-    console.log("json", json);
     setGitData(json);
   };
 
