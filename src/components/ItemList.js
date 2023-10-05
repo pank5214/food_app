@@ -3,6 +3,7 @@ import { CDN_URL } from "../utils/constants";
 import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
+  console.log("items", items);
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
@@ -14,7 +15,8 @@ const ItemList = ({ items }) => {
     <div>
       <div>
         {items.map((item) => (
-          <div data-testid="foodItems"
+          <div
+            data-testid="foodItems"
             key={item?.card?.info?.id}
             className="m-2 p-2 text-left border-b-2 flex justify-between"
           >
@@ -41,7 +43,11 @@ const ItemList = ({ items }) => {
                   Add +
                 </button>
               </div>
-              <img src={CDN_URL + item?.card?.info?.imageId} alt="item-image" className="rounded-lg"/>
+              <img
+                src={CDN_URL + item?.card?.info?.imageId}
+                alt="item-image"
+                className="rounded-lg"
+              />
             </div>
           </div>
         ))}

@@ -4,6 +4,7 @@ import { clearCart } from "../utils/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
+  console.log("cart", cartItems);
 
   const dispatch = useDispatch();
 
@@ -22,7 +23,9 @@ const Cart = () => {
           Clear Cart
         </button>
         {cartItems.length === 0 && (
-          <h1 className="font-style: italic">"Cart is empty. Add your delicious meal here!"</h1>
+          <h1 className="font-style: italic">
+            "Cart is empty. Add your delicious meal here!"
+          </h1>
         )}
         <ItemList items={cartItems} />
       </div>

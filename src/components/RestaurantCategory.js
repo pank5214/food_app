@@ -2,6 +2,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ categoryData, showItems, setShowIndex }) => {
+  console.log("categoryData", categoryData.itemCards);
   const [show, setShow] = useState();
 
   const clickHandler = () => {

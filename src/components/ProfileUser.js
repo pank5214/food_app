@@ -16,7 +16,7 @@ const ProfileUser = ({ gitData }) => {
           <BsLinkedin />
         </i>
       </a>
-      <a href={Twitter_Link} className=" w-22 h-22" target="_blank">
+      <a href={Twitter_Link} className="w-22 h-22" target="_blank">
         <i>
           <SiTwitter />
         </i>
