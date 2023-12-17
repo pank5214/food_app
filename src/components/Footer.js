@@ -2,7 +2,7 @@
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="bg-pink-100 flex justify-center inset-x-0 bottom-0` shadow-lg p-5 md:p-6 fixed">
+    <div className="bg-pink-100 flex justify-center inset-x-0 bottom-0 shadow-lg p-5 md:p-6 fixed">
       Created By ❤️
       <a
         className="px-2 font-bold text-blue-700 hover:text-red-600"
