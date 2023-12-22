@@ -31,7 +31,7 @@ const About = () => {
         )}
       </div>
 
-      <div className="flex flex-col items-center md:flex-row md:justify-between p-4 m-4">
+      <div className="md:grid md:grid-flow-col md:h-[440px] items-center md:flex-row md:justify-between p-4 m-4">
         <div className="mx-15 md:mx-0 md:self-center">
           <h1 className="font-bold text-3xl md:text-4xl my-4 text-green-900 md:text-start text-center">
             Welcome to the
